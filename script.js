@@ -11,30 +11,15 @@ let bgMusic; // Variable to hold the background music
 let musicState = "ok";
 // Initialize audio elements
 function initializeMusic() {
-  // New background music
   newBgMusic = new Audio(newMusicURL);
   newBgMusic.loop = true; // Loop the new music
-  // newBgMusic.muted = true; // Start muted
-  newBgMusic.play().catch(error => console.error("Error playing new background music:", error));
-
-  // Background music
-  if (bgMusicURL) {
-    bgMusic = new Audio(bgMusicURL);
-    bgMusic.loop = true; // Loop the background music
-  } else {
-    newBgMusic.pause();
-  }
-}
-function initializeMusic() {
-  newBgMusic = new Audio(newMusicURL);
-  newBgMusic.loop = true; // Loop the new music
-  // newBgMusic.muted = true; // Start muted
   
   // Check localStorage to determine if music should be playing
-  // const musicState = localStorage.getItem('musicState');
   if (musicState === 'ok') {
-    newBgMusic.play().catch(error => console.error("Error playing new background music:", error));
-    // newBgMusic.muted = false; // Unmute if previously set to play
+    newBgMusic.play().catch(error => {
+      console.error("Error playing new background music:", error);
+      // Optionally, show a message to the user
+    });
   } 
 }
 
