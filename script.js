@@ -1,7 +1,7 @@
 const radius = 400; // Carousel radius
 const autoRotate = true; // Auto rotate or not
 const rotateSpeed = -60; // Rotation speed in seconds per 360 degrees
-const imgWidth = 300; // Width of images (px)
+const imgWidth = 270; // Width of images (px)
 const imgHeight = 400; // Height of images (px)
 // const bgMusicURL = 'https://soundcloud.com/janavi-mate/happy-birthday-song-in-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'; // URL of background music
 const bgMusicURL = 'imgs/happy-birthday.mp3'; // URL of background music
@@ -23,8 +23,27 @@ function initializeMusic() {
   } 
 }
 
-// Call initializeMusic on page load
-window.onload = initializeMusic;
+// Add this variable to track if music has been initialized
+let musicInitialized = false;
+
+// Update the existing window.onload to check for first click and set timeout
+window.onload = function() {
+  // Call initializeMusic after 0.1 seconds
+  setTimeout(() => {
+    if (!musicInitialized) {
+      initializeMusic();
+      musicInitialized = true; // Prevent further calls
+    }
+  }, 100); // 100 milliseconds
+
+  // Add click event listener
+  document.addEventListener('click', function() {
+    if (!musicInitialized) {
+      initializeMusic();
+      musicInitialized = true; // Prevent further calls
+    }
+  });
+};
 
 const bgMusicControls = false; // Show UI music control
 
@@ -501,4 +520,6 @@ wishButton.addEventListener('click', () => {
     wishIndex = 0; // Reset wish index when going back
   }
 });
+
+
 
