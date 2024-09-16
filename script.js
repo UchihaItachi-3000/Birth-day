@@ -3,7 +3,7 @@ const autoRotate = true; // Auto rotate or not
 const rotateSpeed = -60; // Rotation speed in seconds per 360 degrees
 const imgWidth = 250; // Width of images (px)
 //const imgHeight = 400; // Height of images (px)
-const imgHeight = 90%; // Height of images (px)
+const imgHeight = 5rem; // Height of images (px)
 // const bgMusicURL = 'https://soundcloud.com/janavi-mate/happy-birthday-song-in-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'; // URL of background music
 const bgMusicURL = 'imgs/happy-birthday.mp3'; // URL of background music
 let newBgMusic; // Variable to hold the new background music
