@@ -229,6 +229,31 @@ body {
   letter-spacing: 1px;
 
 }
+#first-click {
+  position: relative;
+  /* bottom: 10vh; */
+  width: 90vw;
+  height: 90vh;
+  margin: 10px auto;
+  margin-top: 40px;
+  /* Changed from fixed pixels to viewport height */
+  right: 5px;
+  left: 5px;
+  /* transform: translateX(-50%); */
+  /* padding: 12px 24px; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
 
 #wish-button:hover {
   /* background-color: #f50057; */
@@ -314,6 +339,105 @@ body {
   margin: 20px 0;
   padding: 10px;
 }
+#first-click {
+  background-color: hsl(0, 0%, 7%);
+  font-family: 'Protest Guerrilla,Pacifico', cursive;
+  font-size: 38px;
+  color: #FFD700;
+  /* Gold color */
+  text-shadow:
+    2px 2px 0 #FF1493,
+    /* Deep pink */
+    -2px -2px 0 #FF1493,
+    2px -2px 0 #FF1493,
+    -2px 2px 0 #FF1493,
+    0 2px 0 #FF1493,
+    2px 0 0 #FF1493,
+    0 -2px 0 #FF1493,
+    -2px 0 0 #FF1493,
+    2px 2px 5px #FF1493;
+    letter-spacing: 10px;
+
+}
+.protest-guerrilla-regular {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.name-highlight{
+  filter: drop-shadow();
+
+  
+
+  font-family: 'Protest Guerrilla','cursive';
+  color: #FFD700;
+  /* Gold color */
+  /* text-shadow:
+    2px 2px 0 #FF1493,
+    -2px -2px 0 #FF1493,
+    2px -2px 0 #FF1493,
+    -2px 2px 0 #FF1493,
+    0 2px 0 #FF1493,
+    2px 0 0 #FF1493,
+    0 -2px 0 #FF1493,
+    -2px 0 0 #FF1493,
+    2px 2px 5px #FF1493; */
+
+    
+    text-shadow:
+        /* Blue stroke effect */
+        5px 1px 0 #0000FF, /* Blue stroke (right-bottom) */
+        -3px -1px 0 #0000FF, /* Blue stroke (left-top) */
+        5px -1px 0 #0000FF, /* Blue stroke (right-top) */
+        -3px 1px 0 #0000FF, /* Blue stroke (left-bottom) */
+      5px 0 0 #0000FF, /* Blue stroke (right) */
+        -3px 0 0 #0000FF, /* Blue stroke (left) */
+        0 1px 0 #0000FF, /* Blue stroke (bottom) */
+        0 -1px 0 #0000FF, /* Blue stroke (top) */
+    1px 1px 0 #FF1493, /* Deep pink shadow offset slightly */
+    -1px -1px 0 #FF1493,
+    1px -1px 0 #FF1493,
+    -1px 1px 0 #FF1493,
+    0 1px 0 #FF1493,
+    1px 0 0 #FF1493,
+    0 -1px 0 #FF1493,
+    -1px 0 0 #FF1493,
+    0 0 5px rgba(255, 20, 147, 0.6); /* Soft glow effect */
+
+    /* Text color */
+/* color: #40E0D0; Turquoise */
+
+/* Text shadow for stroke and glow effect */
+/* Text color */
+/* color: hsl(49, 100%, 50%); Bright Coral */
+
+/* Text shadow for stroke and glow effect */
+text-shadow:
+    /* Deep blue stroke effect */
+ 
+
+    5px 1px 0 #0000FF, /* Blue stroke (right-bottom) */
+    -3px -1px 0 #0000FF, /* Blue stroke (left-top) */
+    5px -1px 0 #0000FF, /* Blue stroke (right-top) */
+    -3px 1px 0 #0000FF, /* Blue stroke (left-bottom) */
+  5px 0 0 #0000FF, /* Blue stroke (right) */
+    -3px 0 0 #0000FF, /* Blue stroke (left) */
+    0 1px 0 #0000FF, /* Blue stroke (bottom) */
+
+    /* Coral shadow effect */
+    1px 1px 0 #FF6347,
+    -1px -1px 0 #FF6347,
+    1px -1px 0 #FF6347,
+    -1px 1px 0 #FF6347,
+    0 1px 0 #FF6347,
+    1px 0 0 #FF6347,
+    0 -1px 0 #FF6347,
+    -1px 0 0 #FF6347,
+    0 0 5px rgba(255, 105, 180, 0.6); /* Soft pink glow effect */
+
+    filter: drop-shadow(3px 3px 6px rgba(248, 250, 254, 0.7));
+}
 
 /* Typewriter effect */
 .typewriter {
@@ -357,6 +481,22 @@ body {
 
 
 #wish-button::before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  border-radius: 15px;
+}
+#first-click::before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
